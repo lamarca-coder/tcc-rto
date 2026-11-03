@@ -1,0 +1,1 @@
+"""Armazenamento estruturado: SQLite + parquet."""

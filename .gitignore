@@ -1,0 +1,27 @@
+# Credenciais
+.env
+
+# Bancos e dados (textos de terceiros, nao publicar)
+*.db
+*.sqlite
+*.parquet
+*.xlsx
+data/
+rotulagem/
+qualitativo/
+resultados/
+_lixo/
+
+# dados/ fica bloqueado, exceto os dois CSVs publicos
+dados/*
+!dados/eventos.csv
+!dados/v2/
+dados/v2/*
+!dados/v2/d5_coerencia.csv
+
+# Saidas e cache
+outputs/*.log
+outputs/logs/
+__pycache__/
+*.py[cod]
+.ruff_cache/

@@ -1,0 +1,25 @@
+# Parâmetros de coleta versionados (C2/C3). Criado em 24/10/2026.
+reddit:
+  fonte: pullpush.io
+  size: 100                 # itens por página
+  paginas: 10               # páginas por consulta (antes: 2)
+  pausa_s: 1.2
+  expressoes: usar config.KEYWORDS_PT (16 expressões)
+  expressoes_descoberta:    # 6 expressões principais (as usadas na coleta anterior)
+    - home office
+    - trabalho remoto
+    - trabalho presencial
+    - retorno ao escritório
+    - trabalho híbrido
+    - fim do home office
+  paginas_descoberta: 5
+  subreddits_base: usar config.SUBREDDITS (12)
+  novos_subreddits: 8 mais frequentes em português (langdetect >= 60% pt) na descoberta; lista em dados/reddit_c2/novos_subreddits.csv
+youtube:
+  janelas:
+    - ["2019-01-01T00:00:00Z", "2021-01-01T00:00:00Z"]
+    - ["2021-01-01T00:00:00Z", "2023-06-01T00:00:00Z"]
+    - ["2023-06-01T00:00:00Z", null]
+  ordens: [viewCount]       # além de relevance (já coletada)
+  videos_por_busca: 50
+  comentarios_por_video: 300

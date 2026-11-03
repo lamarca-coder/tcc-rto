@@ -1,0 +1,38 @@
+# Versões instaladas no ambiente em que o projeto foi rodado (Python 3.12.7, Anaconda, Windows 11).
+# Só entram pacotes realmente importados pelo código (run_pipeline.py, config.py, src/, scripts/).
+
+# --- Núcleo ---
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.13.1
+scikit-learn==1.5.1        # TF-IDF, LDA, regressão logística, métricas
+pyarrow==24.0.0            # leitura e escrita de parquet
+python-dotenv==0.21.0      # chaves de API no .env
+PyYAML==6.0.1              # config_coleta.yaml
+tqdm==4.66.5
+nltk==3.9.1                # stopwords e stemming (v0)
+langdetect==1.0.9          # detecção de idioma
+openpyxl==3.1.5            # planilhas de rotulagem e excertos
+python-docx==1.2.0         # leitura do livro de códigos (B2/B8)
+
+# --- NLP ---
+pysentimiento==0.7.3       # sentimento (bertweet-pt-sentiment)
+transformers==5.12.1
+torch==2.12.1
+sentence-transformers==5.6.0   # filtro semântico e embeddings (paraphrase-multilingual-MiniLM-L12-v2)
+gensim==4.3.3              # coerência c_v dos tópicos (o LDA é do scikit-learn)
+vaderSentiment==3.3.2      # sentimento por léxico (v0, método padrão do run_pipeline.py)
+
+# --- Coleta ---
+requests==2.34.2           # YouTube Data API v3, Bluesky, Arctic Shift
+praw==8.0.1                # Reddit (v0)
+tweepy==4.16.0             # X/Twitter (v0, não usado nos resultados)
+kaggle==2.2.2              # download dos datasets do State of Data
+
+# --- Figuras ---
+matplotlib==3.9.2
+seaborn==0.13.2
+wordcloud==1.9.6
+
+# --- Desenvolvimento (opcional) ---
+# ruff==0.17.3
